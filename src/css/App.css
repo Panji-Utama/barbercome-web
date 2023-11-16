@@ -36,3 +36,13 @@
     transform: rotate(360deg);
   }
 }
+
+/* Typing animation */
+
+.myCustomAnimation {
+  color: blue; /* Text color */
+}
+
+.myCustomAnimation::after {
+  background-color: red; /* Cursor color */
+}

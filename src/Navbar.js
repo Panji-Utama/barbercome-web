@@ -1,18 +1,41 @@
-import barbercome from "./assets/img/BARBERCOME.png";
+import barbercome from "./assets/img/BARBERCOME-cropped.png";
 
-const Navbar = () => {
+const Navbar = ({ activeSection }) => {
+  const scrollToSection = (event, sectionId) => {
+    event.preventDefault(); // Prevent default anchor behavior
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
-    <nav className="flex justify-between items-center bg-firstColor">
-      <img src={barbercome} alt="" className="h-20 w-20 mx-4" />
-      <ul className="mr-4 flex">
-        <li className="mx-6 my-4 text-white border-solid border-2 border-firstColor hover:border-b-slate-200 transition ease-in duration-200">
-          <p className="text-white">Lorem</p>
+    <nav className="fixed top-0 w-full z-10 flex justify-between items-center bg-firstColor shadow-xl">
+      <img src={barbercome} alt="" className="h-20 ml-20" />
+      <ul className="mr-20 flex">
+        <li
+          className={`mx-6 my-4 p-2 ${
+            activeSection === "keunggulan" ? "bg-[#32727a]" : "text-white"
+          } border-solid rounded-md border-2 border-firstColor text-white hover:border-b-slate-200 transition ease-in duration-200`}
+          onClick={(e) => scrollToSection(e, "keunggulan")}
+        >
+          <a href="#keunggulan">Keunggulan</a>
         </li>
-        <li className="mx-6 my-4 text-white border-solid border-2 border-firstColor hover:border-b-slate-200 transition ease-in duration-200">
-          Test
+        <li
+          className={`mx-6 my-4 p-2 ${
+            activeSection === "fitur" ? "bg-[#32727a]" : "text-white"
+          } border-solid rounded-md border-2 border-firstColor text-white hover:border-b-slate-200 transition ease-in duration-200`}
+          onClick={(e) => scrollToSection(e, "fitur")}
+        >
+          <a href="#fitur">Fitur</a>
         </li>
-        <li className="mx-6 my-4 text-white border-solid border-2 border-firstColor hover:border-b-slate-200 transition ease-in duration-200">
-          Test
+        <li
+          className={`mx-6 my-4 p-2 ${
+            activeSection === "testimoni" ? "bg-[#32727a]" : "text-white"
+          } border-solid rounded-md border-2 border-firstColor text-white hover:border-b-slate-200 transition ease-in duration-200`}
+          onClick={(e) => scrollToSection(e, "testimoni")}
+        >
+          <a href="#testimoni">Testimoni</a>
         </li>
       </ul>
     </nav>
