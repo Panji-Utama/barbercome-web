@@ -12,7 +12,10 @@ module.exports = {
         poppins: ["Poppins", "sans-serif"],
         montserrat: ["Montserrat", "sans-serif"],
       },
+      boxShadow: {
+        navGlow: "0px 0px 25px 11px rgba(255,255,255,0.48);",
+      },
     },
   },
-  plugins: [],
+  plugins: [require("tailwind-scrollbar")],
 };
