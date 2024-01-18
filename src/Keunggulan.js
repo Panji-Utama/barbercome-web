@@ -11,7 +11,9 @@ const Keunggulan = () => {
     const sectionTop = section?.getBoundingClientRect().top;
     const triggerPoint = window.innerHeight;
 
-    setShowHeader(sectionTop <= triggerPoint);
+    if (sectionTop <= triggerPoint) {
+      setShowHeader(true);
+    }
   };
 
   const checkScrollDivs = () => {
@@ -20,18 +22,18 @@ const Keunggulan = () => {
     const div3 = document.getElementById("div3");
     const triggerPoint = window.innerHeight;
 
-    setShowDiv1(
-      div1.getBoundingClientRect().top <= triggerPoint &&
-        div1.getBoundingClientRect().bottom >= 0
-    );
-    setShowDiv2(
-      div2.getBoundingClientRect().top <= triggerPoint &&
-        div2.getBoundingClientRect().bottom >= 0
-    );
-    setShowDiv3(
-      div3.getBoundingClientRect().top <= triggerPoint &&
-        div3.getBoundingClientRect().bottom >= 0
-    );
+    const setVisibility = (element, setShow) => {
+      const top = element.getBoundingClientRect().top;
+      const bottom = element.getBoundingClientRect().bottom;
+
+      if (top <= triggerPoint && bottom >= 0) {
+        setShow(true);
+      }
+    };
+
+    setVisibility(div1, setShowDiv1);
+    setVisibility(div2, setShowDiv2);
+    setVisibility(div3, setShowDiv3);
   };
 
   useEffect(() => {

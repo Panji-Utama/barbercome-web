@@ -18,7 +18,7 @@ code {
 
 /* width */
 ::-webkit-scrollbar {
-  width: .5rem;
+  width: 0.5rem;
 }
 
 /* Track */
@@ -28,10 +28,21 @@ code {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #FEF8C4;
+  background: #fef8c4;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #344345;
+}
+
+@media (max-width: 768px) {
+  /* Styles for small screens */
+  .navbar-menu {
+    display: none;
+  }
+
+  .navbar-menu.open {
+    display: block;
+  }
 }
