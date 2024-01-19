@@ -47,48 +47,65 @@ const Keunggulan = () => {
   }, []);
 
   return (
-    <div id="keunggulan" className="min-h-screen flex flex-col items-center">
-      <div className="h-40 mt-10 text-center pt-10">
+    <div
+      id="keunggulan"
+      className="flex min-h-screen flex-col items-center font-poppins"
+    >
+      <div className="mt-10 h-40 pt-10 text-center">
         <h2
-          className={`text-secondColor font-poppins font-bold text-[40px] transition-transform duration-500 ease-out transform ${
+          className={`transform text-[40px] font-bold text-secondColor transition-transform duration-500 ease-out ${
             showHeader ? "scale-100" : "scale-0"
           }`}
         >
-          Bagaimana kami memecahkan problem potong rambut
+          Bagaimana kami memecahkan problem potong rambut?
         </h2>
       </div>
       <div id="elementBox" className="flex flex-row">
         <div
           id="div1"
-          className={`bg-accentColor mx-8 px-8 py-6 rounded-lg shadow-xl border-solid border-black justify-center items-center text-center transition-all duration-1000 ${
+          className={`mx-8 flex flex-col items-center justify-center rounded-lg border-solid border-black bg-accentColor px-8 py-6 text-center shadow-xl transition-all duration-1000 ${
             showDiv1
               ? "translate-x-0 opacity-100"
               : "-translate-x-full opacity-0"
           }`}
         >
-          <h3 className="font-poppins">Hey</h3>
-          <p className="font-thin">Lorem</p>
+          <h3 className="text-xl font-semibold text-secondColor">
+            Sambil bersantai di rumah
+          </h3>
+          <img
+            className="my-10 h-60 rounded-lg"
+            src="https://akcdn.detik.net.id/community/media/visual/2020/10/31/manfaat-bersantai-sumber-freepikcom.jpeg?w=620&q=90"
+            alt="Bersantai di rumah"
+          />
+          <p className="text-secondColor">
+            Anda bisa mendapatkan sesi pencukuran rambut <br />
+            tanpa repot-repot ke barbershop
+          </p>
         </div>
         <div
           id="div2"
-          className={`bg-accentColor mx-8 px-8 py-6 rounded-lg shadow-xl border-solid border-black justify-center items-center text-center transition-all duration-1000 ${
+          className={`mx-8 items-center justify-center rounded-lg border-solid border-black bg-accentColor px-8 py-6 text-center shadow-xl transition-all duration-1000 ${
             showDiv2
               ? "translate-y-0 opacity-100"
               : "translate-y-full opacity-0"
           }`}
         >
-          <h3 className="font-poppins">Hey</h3>
-          <p>Lorem</p>
+          <h3 className="font-semibold">Layanan yang dapat dipercaya</h3>
+          <p>
+            Dengan barber kami yang ahli dan bersertifikasi,
+            <br />
+            anda tidak perlu ragu dengan pelayanan kami
+          </p>
         </div>
         <div
           id="div3"
-          className={`bg-accentColor mx-8 px-8 py-6 rounded-lg shadow-xl border-solid border-black justify-center items-center text-center transition-all duration-1000 ${
+          className={`mx-8 items-center justify-center rounded-lg border-solid border-black bg-accentColor px-8 py-6 text-center shadow-xl transition-all duration-1000 ${
             showDiv3
               ? "translate-x-0 opacity-100"
               : "translate-x-full opacity-0"
           }`}
         >
-          <h3 className="font-poppins">Hey</h3>
+          <h3 className="f">Hey</h3>
           <p>Lorem</p>
         </div>
       </div>
