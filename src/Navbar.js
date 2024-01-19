@@ -29,6 +29,12 @@ const Navbar = ({ activeSection }) => {
         >
           <a href="#fitur">Fitur</a>
         </li>
+        {/* <li
+          className={`mx-6 my-4 p-2 text-white ${
+            activeSection === "testimoni" ? "bg-[#32727a]" : ""
+          } border-solid rounded-md border-2 border-firstColor hover:scale-110 hover:text-[#d2faff] transition ease-in duration-100`}
+          onClick={(e) => scrollToSection(e, "testimoni")}
+        > */}
         <li
           className={`mx-6 my-4 p-2 text-white ${
             activeSection === "testimoni" ? "bg-[#32727a]" : ""

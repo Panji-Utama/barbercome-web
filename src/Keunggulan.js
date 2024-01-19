@@ -2,9 +2,9 @@ import React, { useState, useEffect } from "react";
 
 const Keunggulan = () => {
   const [showHeader, setShowHeader] = useState(false);
-  const [showDiv1, setShowDiv1] = useState(false);
-  const [showDiv2, setShowDiv2] = useState(false);
-  const [showDiv3, setShowDiv3] = useState(false);
+  const [showCard1, setShowCard1] = useState(false);
+  const [showCard2, setShowCard2] = useState(false);
+  const [showCard3, setShowCard3] = useState(false);
 
   const checkScroll = () => {
     const section = document.getElementById("keunggulan");
@@ -17,9 +17,9 @@ const Keunggulan = () => {
   };
 
   const checkScrollDivs = () => {
-    const div1 = document.getElementById("div1");
-    const div2 = document.getElementById("div2");
-    const div3 = document.getElementById("div3");
+    const card1 = document.getElementById("card1");
+    const card2 = document.getElementById("card2");
+    const card3 = document.getElementById("card3");
     const triggerPoint = window.innerHeight;
 
     const setVisibility = (element, setShow) => {
@@ -31,9 +31,9 @@ const Keunggulan = () => {
       }
     };
 
-    setVisibility(div1, setShowDiv1);
-    setVisibility(div2, setShowDiv2);
-    setVisibility(div3, setShowDiv3);
+    setVisibility(card1, setShowCard1);
+    setVisibility(card2, setShowCard2);
+    setVisibility(card3, setShowCard3);
   };
 
   useEffect(() => {
@@ -49,9 +49,9 @@ const Keunggulan = () => {
   return (
     <div
       id="keunggulan"
-      className="flex min-h-screen flex-col items-center font-poppins"
+      className="flex h-[100vh] min-h-screen flex-col items-center font-poppins"
     >
-      <div className="mt-10 h-40 pt-10 text-center">
+      <div className="mt-20 h-40 pt-10 text-center">
         <h2
           className={`transform text-[40px] font-bold text-secondColor transition-transform duration-500 ease-out ${
             showHeader ? "scale-100" : "scale-0"
@@ -62,15 +62,16 @@ const Keunggulan = () => {
       </div>
       <div id="elementBox" className="flex flex-row">
         <div
-          id="div1"
+          id="card1"
           className={`mx-8 flex flex-col items-center justify-center rounded-lg border-solid border-black bg-accentColor px-8 py-6 text-center shadow-xl transition-all duration-1000 ${
-            showDiv1
+            showCard1
               ? "translate-x-0 opacity-100"
               : "-translate-x-full opacity-0"
           }`}
         >
           <h3 className="text-xl font-semibold text-secondColor">
-            Sambil bersantai di rumah
+            Menghemat <br />
+            energi
           </h3>
           <img
             className="my-10 h-60 rounded-lg"
@@ -83,14 +84,21 @@ const Keunggulan = () => {
           </p>
         </div>
         <div
-          id="div2"
-          className={`mx-8 items-center justify-center rounded-lg border-solid border-black bg-accentColor px-8 py-6 text-center shadow-xl transition-all duration-1000 ${
-            showDiv2
+          id="card2"
+          className={`mx-8 flex flex-col items-center justify-center rounded-lg border-solid border-black bg-accentColor px-8 py-6 text-center shadow-xl transition-all duration-1000 ${
+            showCard2
               ? "translate-y-0 opacity-100"
               : "translate-y-full opacity-0"
           }`}
         >
-          <h3 className="font-semibold">Layanan yang dapat dipercaya</h3>
+          <h3 className="text-xl font-semibold text-secondColor">
+            Layanan yang <br /> dapat dipercaya
+          </h3>
+          <img
+            className="my-10 h-60 rounded-lg"
+            src="https://heygoldie.com/blog/wp-content/uploads/2021/12/barbershop-terminology-1.jpg"
+            alt="Bersantai di rumah"
+          />
           <p>
             Dengan barber kami yang ahli dan bersertifikasi,
             <br />
@@ -98,15 +106,23 @@ const Keunggulan = () => {
           </p>
         </div>
         <div
-          id="div3"
-          className={`mx-8 items-center justify-center rounded-lg border-solid border-black bg-accentColor px-8 py-6 text-center shadow-xl transition-all duration-1000 ${
-            showDiv3
+          id="card3"
+          className={`mx-8 flex flex-col items-center justify-center rounded-lg border-solid border-black bg-accentColor px-8 py-6 text-center shadow-xl transition-all duration-1000 ${
+            showCard3
               ? "translate-x-0 opacity-100"
               : "translate-x-full opacity-0"
           }`}
         >
-          <h3 className="f">Hey</h3>
-          <p>Lorem</p>
+          <h3 className="text-xl font-semibold text-secondColor">
+            Dapat beraktivitas <br />
+            seperti biasa
+          </h3>
+          <img
+            className="my-10 h-60 rounded-lg"
+            src="https://www.verywellmind.com/thmb/9Ce-llfVBbgCBF0ge8ViujKJp7Q=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-1319764461-1364e877165546a29e4d3815101d7e72.jpg"
+            alt="Bersantai di rumah"
+          />
+          <p>Sambil menunggu,<br /> anda dapat melakukan apapun yang anda mau</p>
         </div>
       </div>
     </div>

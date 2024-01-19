@@ -30,7 +30,7 @@ const ExampleComponent = () => {
   });
 
   return (
-    <div className="bg-secondColor">
+    <div className="bg-secondColor min-h-screen">
       <div className="grid grid-cols-2">
         <div className="flex flex-col justify-center mt-20 items-center">
           <div className="flex items-center">

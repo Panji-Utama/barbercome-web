@@ -1,7 +1,7 @@
 const Footer = () => {
   return (
-    <footer className="bg-firstColor text-white text-center p-4">
-      <p className="font-poppins font-semibold">© 2023 Barbercome</p>
+    <footer className="bg-firstColor p-4 text-center text-white">
+      <p className="font-poppins font-semibold">&copy; 2024 Barbercome</p>
     </footer>
   );
 };
