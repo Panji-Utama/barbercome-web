@@ -57,7 +57,7 @@ const ExampleComponent = () => {
               Barbercome
             </span>
             <span>
-              , anda tidak perlu repot-repot lagi untuk ke barbershop, kami yang
+              ,  anda tidak perlu repot-repot lagi untuk ke barbershop, kami yang
               akan datang ke anda!
             </span>
           </p>
